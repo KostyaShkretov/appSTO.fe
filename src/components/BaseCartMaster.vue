@@ -5,14 +5,18 @@
       :alt="master.photo"
       class="masters__photo"
     />
-    <h2>{{ master.name }}</h2>
+    <router-link :to="{name: 'master', params: {master: master.id} }">
+      <h2>{{ master.name }}</h2>
+    </router-link>
     <p>Стаж: {{ master.experience }}</p>
     <p>Специализация: {{ master.specialization }}</p>
   </div>
 </template>
 
 <script>
+import MasterPage from "@/pages/MasterPage.vue";
 export default {
+  components: { MasterPage },
   props: {
     master: {
       type: Object,
@@ -27,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .masters__cart {
   max-width: 300px;
   display: flex;
