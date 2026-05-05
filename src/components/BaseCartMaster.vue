@@ -5,7 +5,7 @@
       :alt="master.photo"
       class="masters__photo"
     />
-    <router-link :to="{name: 'master', params: {master: master.id} }">
+    <router-link :to="{ name: 'master', params: { master: master.id } }">
       <h2>{{ master.name }}</h2>
     </router-link>
     <p>Стаж: {{ master.experience }}</p>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import nophoto from "@/assets/icons/nofoto.png";
 import MasterPage from "@/pages/MasterPage.vue";
 export default {
   components: { MasterPage },
@@ -25,6 +26,9 @@ export default {
   },
   methods: {
     getPhoto(photo) {
+      if (!photo) {
+        return nophoto;
+      }
       return `http://localhost/storage/${photo}`;
     },
   },
