@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import api from "@/api";
 import BaseMain from "@/components/BaseMain.vue";
 import BaseCartMaster from "@/components/BaseCartMaster.vue";
 
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     async loadMasters() {
-      const response = await axios.get("http://localhost/api/masters");
+      const response = await api.get("masters");
       this.masters = response.data;
     },
   },

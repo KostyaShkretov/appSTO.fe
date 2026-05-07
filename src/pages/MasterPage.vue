@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import nophoto from '@/assets/icons/nofoto.png';
+import nophoto from '@/assets/icons/nofoto.png'
 import BaseMain from "@/components/BaseMain.vue";
 import BaseCartProfile from "@/components/BaseCartProfile.vue";
-import axios from "axios";
+import api from "@/api";
 export default {
   components: { BaseMain, BaseCartProfile },
   data() {
@@ -59,7 +59,7 @@ export default {
     },
     async loadMasters() {
       const id = this.$route.params.master;
-      const response = await axios.get(`http://localhost/api/masters/${id}`);
+      const response = await api.get(`masters/${id}`);
       this.master = response.data;
     },
   },

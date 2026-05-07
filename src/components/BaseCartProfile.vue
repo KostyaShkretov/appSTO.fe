@@ -15,7 +15,7 @@
         </div>
         <ul class="profile__ul">
           <li>🧰 Опыт работы: {{ formatExperience(master.experience) }}</li>
-          <li>🎯 Специализация {{ master.specialization }}</li>
+          <li>🎯 Специализация: {{ master.specialization }}</li>
           <li>📅 Работает в СТО с {{ startYear }} года</li>
           <li>⭐ 4.9 (155 отзывов (в разработке))</li>
         </ul>
@@ -46,6 +46,9 @@ export default {
 </script>
 
 <style>
+.profile__name p{
+  color: #2563eb;
+}
 .profile__attributes {
   max-width: 600px;
   padding: 16px;
