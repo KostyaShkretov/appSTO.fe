@@ -1,7 +1,7 @@
 <template>
   <div class="masters__cart">
     <img
-      :src="getPhoto(master.photo)"
+      :src="getPhoto(master.photo)" v-if="getPhoto(master.photo)"
       :alt="master.photo"
       class="masters__photo"
     />
