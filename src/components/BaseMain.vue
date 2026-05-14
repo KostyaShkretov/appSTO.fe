@@ -94,5 +94,57 @@ export default {
 }
  
 
+.main__container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;  
+}
+
+.main__head { 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+  margin: 40px 0px 20px 0px;
+  width: 50%;
+}
  
+.main__img {
+  width: 50%;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.advantages {
+  max-width: 1200px;
+  margin: 60px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 20px;
+  background: #f9fafb;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card h3 {
+  font-size: 20px;
+}
+
+.card p {
+  color: #6b7280;
+  line-height: 1.5;
+}
 </style>
